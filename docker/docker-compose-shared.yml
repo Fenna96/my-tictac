@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  tictac:
+    container_name: my-tictac
+    build: ..
+    command: python manage.py runserver 0.0.0.0:9000 --settings=my_tictac.settings.docker
+    ports:
+      - "9000:9000"
+    environment:
+      DB_HOST: 'mysql'
+      DB_NAME: 'mytictac'
+      DB_USER: 'root'
+      DB_PASS: ''
+      DB_PORT: '3306'
+    tty: true
+    networks:
+      - shared
+
+# networks to share containers between projects
+networks:
+  shared:
+    external:
+      name: shared
+

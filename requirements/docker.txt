@@ -1,0 +1,4 @@
+-r base.txt
+
+# Database #
+mysqlclient==1.4.6

@@ -1,0 +1,10 @@
+pip
+
+# Basic data-scifi
+pandas==1.2.4
+numpy==1.20.2
+
+# Django
+django==3.2
+django-rest==0.8.7
+django-jsonfield==1.4.1
